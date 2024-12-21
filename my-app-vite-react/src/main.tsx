@@ -1,11 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App'
 import './i18n'; // Import the i18n configuration file
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import App from './App';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <div className="container">
     <App />
-  </StrictMode>,
+  </div>,
 )
