@@ -1,7 +1,14 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "es5",             // Set target to ES5 or higher
+    "lib": ["dom", "esnext"],    // Include libraries for the browser environment
+    "jsx": "react-jsx",              // Set JSX option to 'react' for React JSX
+    "module": "commonjs",        // Use commonjs modules (required by Jest)
+    "moduleResolution": "node",  // Ensure module resolution is set to node
+    "strict": true,              // Enable strict type checking
+    "esModuleInterop": true,     // Enable compatibility with ES Modules
+    "skipLibCheck": true         // Skip checking of library files (for speed)
+  },
+  "include": ["src/**/*"],        // Include all files in the 'src' directory
+  "exclude": ["node_modules", "build", "dist"]  // Exclude unnecessary directories
 }
