@@ -1,4 +1,5 @@
 {
-    "hello_world": "Hello world...!"
+    "hello_world": "Hello world...!",
+    "current_time": "The current time is {{time}}."
   }
   
