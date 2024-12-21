@@ -2,9 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [count, setCount] = useState(0)
+  const { t, i18n } = useTranslation();
+  const handleChangeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng); // Change language dynamically
+  };
+
 
   return (
     <div className='app' title='apptitle'>
@@ -17,11 +23,15 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{t('hello_world')}</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+        <button onClick={() => handleChangeLanguage('en')}>English</button>
+      <button onClick={() => handleChangeLanguage('fr')}>Français</button>
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

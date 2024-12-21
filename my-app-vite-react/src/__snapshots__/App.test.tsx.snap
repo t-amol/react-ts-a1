@@ -28,7 +28,7 @@ exports[`App Component test snapshot 1`] = `
     </a>
   </div>
   <h1>
-    Vite + React
+    hello_world
   </h1>
   <div
     class="card"
@@ -36,6 +36,12 @@ exports[`App Component test snapshot 1`] = `
     <button>
       count is 
       0
+    </button>
+    <button>
+      English
+    </button>
+    <button>
+      Français
     </button>
     <p>
       Edit 
