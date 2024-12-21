@@ -6,6 +6,7 @@ import Backend from 'i18next-http-backend';
 // Import the default language files
 import enTranslation from './locales/en/translation.json';
 import frTranslation from './locales/fr/translation.json';
+import arTranslation from './locales/ar/translation.json';
 
 // Initialize i18next
 i18n
@@ -16,6 +17,7 @@ i18n
     resources: {
       en: { translation: enTranslation },
       fr: { translation: frTranslation },
+      ar: { translation: arTranslation },
     },
     lng: 'en', // Default language
     fallbackLng: 'en', // Fallback language if the detected language is not available
