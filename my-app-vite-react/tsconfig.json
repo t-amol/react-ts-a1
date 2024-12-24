@@ -7,7 +7,8 @@
     "moduleResolution": "node",  // Ensure module resolution is set to node
     "strict": true,              // Enable strict type checking
     "esModuleInterop": true,     // Enable compatibility with ES Modules
-    "skipLibCheck": true         // Skip checking of library files (for speed)
+    "skipLibCheck": true,         // Skip checking of library files (for speed)
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"],        // Include all files in the 'src' directory
   "exclude": ["node_modules", "build", "dist"]  // Exclude unnecessary directories

@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
                 Courses
               </Link>
             </li>
-            <li className="nav-item">
+{/*             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/newcourse">
                 New Course
               </Link>
@@ -57,13 +57,13 @@ const Navbar: React.FC = () => {
               <Link className="nav-link" aria-current="page" to="/signupbootstrap5">
               SignupBootstrap5
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/signupmui">
               SignupMui
               </Link>
             </li>
-            <li className="nav-item">
+{/*             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/signupsemantic">
               SignupSemantic
               </Link>
@@ -72,7 +72,14 @@ const Navbar: React.FC = () => {
               <Link className="nav-link" aria-current="page" to="/signupunstyled">
               SignupUnstyled
               </Link>
+            </li> */}
+
+          <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/formjsonform">
+              FormJsonform
+              </Link>
             </li>
+            
 
             <li className="nav-item">
               <Link className="nav-link" to="/posts">
