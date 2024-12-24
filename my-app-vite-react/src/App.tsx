@@ -8,6 +8,14 @@ import Navbar from "./navbar/navbar";
 import CourseDetails from "./coursedetails/coursedetails";
 import NewCourse from "./newcourse/newcourse";
 import GrandParent from "./contextapi/contextapi";
+import FormUnstyled from "./forms/formunstyled";
+import { SignUpBootstrap4 } from "./forms/signupbootstrap4";
+import { SignUpAntd } from "./forms/signupantd";
+import { SignUpBootstrap5 } from "./forms/signupbootstrap5";
+import { SignUpMui } from "./forms/signupmui";
+import { SignUpSemantic } from "./forms/signupsemantic";
+import { SignUpUnstyled } from "./forms/signupunstyled";
+
 const Posts = React.lazy(() => import("./posts/posts"));
 
 const App: React.FC = () => {
@@ -17,9 +25,15 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" Component={ListOfCourses}></Route>
         <Route path="/newcourse" Component={NewCourse}></Route>
+        <Route path="/formUnstyled" Component={FormUnstyled}></Route>
+        <Route path="/signupantd" Component={SignUpAntd}></Route>
+        <Route path="/signupbootstrap4" Component={SignUpBootstrap4}></Route>
+        <Route path="/signupbootstrap5" Component={SignUpBootstrap5}></Route>
+        <Route path="/signupmui" Component={SignUpMui}></Route>
+        <Route path="/signupsemantic" Component={SignUpSemantic}></Route>
+        <Route path="/signupunstyled" Component={SignUpUnstyled}></Route>
         <Route path="/coursedetails/:cid" Component={CourseDetails}></Route>
         <Route path="/contextapi" Component={GrandParent}></Route>
-
         <Route
           path="/posts"
           element={
