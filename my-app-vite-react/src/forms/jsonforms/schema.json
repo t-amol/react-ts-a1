@@ -1,50 +1,74 @@
 {
   "type": "object",
   "properties": {
-    "person": {
-      "title": "Person",
-      "type": "object",
-      "properties": {
-        "firstName": {
-          "type": "string"
-        },
-        "lastName": {
-          "type": "string"
-        },
-        "age": {
-          "description": "Age in years",
-          "type": "integer",
-          "minimum": 0
-        },
-        "shippingAddress": {
-          "$ref": "#/properties/address/properties/addressId"
-        }
-      },
-      "required": [
-        "firstName",
-        "lastName"
+    "firstName": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Please enter your first name"
+    },
+    "secondName": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Please enter your second name"
+    },
+    "vegetarian": {
+      "type": "boolean"
+    },
+    "birthDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Please enter your birth date."
+    },
+    "nationality": {
+      "type": "string",
+      "enum": [
+        "DE",
+        "IT",
+        "JP",
+        "US",
+        "RU",
+        "Other"
       ]
     },
+    "provideAddress": {
+      "type": "boolean"
+    },
     "address": {
-      "title": "Order",
       "type": "object",
       "properties": {
-        "addressId": {
-          "type": "string",
-          "label": "Address Type",
-          "enum": [
-            "Home Address 1",
-            "Home Address 2",
-            "Workplace"
-          ]
-        },
         "street": {
+          "type": "string"
+        },
+        "streetNumber": {
           "type": "string"
         },
         "city": {
           "type": "string"
         },
-        "zipCode": {
+        "postalCode": {
+          "type": "string",
+          "maxLength": 5
+        }
+      }
+    },
+    "vegetarianOptions": {
+      "type": "object",
+      "properties": {
+        "vegan": {
+          "type": "boolean"
+        },
+        "favoriteVegetable": {
+          "type": "string",
+          "enum": [
+            "Tomato",
+            "Potato",
+            "Salad",
+            "Aubergine",
+            "Cucumber",
+            "Other"
+          ]
+        },
+        "otherFavoriteVegetable": {
           "type": "string"
         }
       }

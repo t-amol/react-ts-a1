@@ -1,70 +1,180 @@
 {
-  "type": "VerticalLayout",
+  "type": "Categorization",
   "elements": [
     {
-      "type": "Group",
-      "label": "Person",
+      "type": "Category",
+      "label": "General",
       "elements": [
         {
-          "type": "HorizontalLayout",
+          "type": "Group",
+          "label": "My Group1",
           "elements": [
             {
-              "type": "Control",
-              "scope": "#/properties/person/properties/firstName"
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/firstName"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/secondName"
+                }
+              ]
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/birthDate"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/nationality"
+                }
+              ]
             },
             {
               "type": "Control",
-              "scope": "#/properties/person/properties/lastName"
+              "scope": "#/properties/provideAddress"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/vegetarian"
             }
           ]
         },
         {
-          "type": "HorizontalLayout",
+          "type": "Group",
+          "label": "My Group2",
           "elements": [
             {
-              "type": "Control",
-              "scope": "#/properties/person/properties/age"
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/firstName"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/secondName"
+                }
+              ]
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/birthDate"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/nationality"
+                }
+              ]
             },
             {
               "type": "Control",
-              "label": "Address",
-              "scope": "#/properties/person/properties/shippingAddress"
+              "scope": "#/properties/provideAddress"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/vegetarian"
             }
           ]
         }
       ]
     },
     {
-      "type": "Group",
+      "type": "Category",
       "label": "Address",
       "elements": [
         {
-          "type": "HorizontalLayout",
+          "type": "Group",
+          "label": "My Group3",
           "elements": [
             {
-              "type": "Control",
-              "scope": "#/properties/person/properties/shippingAddress"
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/address/properties/street"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/address/properties/streetNumber"
+                }
+              ]
             },
             {
-              "type": "Control",
-              "scope": "#/properties/address/properties/street"
-            }
-          ]
-        },
-        {
-          "type": "HorizontalLayout",
-          "elements": [
-            {
-              "type": "Control",
-              "scope": "#/properties/address/properties/city"
-            },
-            {
-              "type": "Control",
-              "scope": "#/properties/address/properties/zipCode"
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/address/properties/city"
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/address/properties/postalCode"
+                }
+              ]
             }
           ]
         }
-      ]
+      ],
+      "rule": {
+        "effect": "SHOW",
+        "condition": {
+          "scope": "#/properties/provideAddress",
+          "schema": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "type": "Category",
+      "label": "Additional",
+      "elements": [
+        {
+          "type": "Group",
+          "label": "My Group4",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/vegetarianOptions/properties/vegan"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/vegetarianOptions/properties/favoriteVegetable"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/vegetarianOptions/properties/otherFavoriteVegetable",
+              "rule": {
+                "effect": "SHOW",
+                "condition": {
+                  "scope": "#/properties/vegetarianOptions/properties/favoriteVegetable",
+                  "schema": {
+                    "const": "Other"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rule": {
+        "effect": "SHOW",
+        "condition": {
+          "scope": "#/properties/vegetarian",
+          "schema": {
+            "const": true
+          }
+        }
+      }
     }
   ]
 }
