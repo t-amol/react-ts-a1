@@ -15,6 +15,7 @@ import { SignUpMui } from "./forms/uniforms/signupmui";
 import { SignUpSemantic } from "./forms/uniforms/signupsemantic";
 import { SignUpUnstyled } from "./forms/uniforms/signupunstyled";
 import { FormJsonform } from "./forms/jsonforms/formjsonform";
+import { TableAgGrid } from "./tables/tableaggrid/tableaggrid";
 
 const Posts = React.lazy(() => import("./posts/posts"));
 
@@ -35,6 +36,7 @@ const App: React.FC = () => {
         <Route path="/signupunstyled" Component={SignUpUnstyled}></Route> */}
 
         <Route path="/formjsonform" Component={FormJsonform}></Route>
+        <Route path="/tableaggrid" Component={TableAgGrid}></Route>
         
         <Route path="/coursedetails/:cid" Component={CourseDetails}></Route>
         <Route path="/contextapi" Component={GrandParent}></Route>

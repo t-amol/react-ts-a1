@@ -80,7 +80,12 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             
-
+            
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/tableaggrid">
+              TableAgGrid
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/posts">
                 Posts
