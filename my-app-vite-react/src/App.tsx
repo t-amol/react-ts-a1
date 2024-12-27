@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 
 import ListOfCourses from "./listofcourses/listofcourses";
 // import Posts from "./posts/posts";
@@ -16,28 +16,28 @@ import { SignUpSemantic } from "./forms/uniforms/signupsemantic";
 import { SignUpUnstyled } from "./forms/uniforms/signupunstyled";
 import { FormJsonform } from "./forms/jsonforms/formjsonform";
 import { TableAgGrid } from "./tables/tableaggrid/tableaggrid";
+import { useTranslation } from 'react-i18next';
+import Translation from "./translation/translation";
 
 const Posts = React.lazy(() => import("./posts/posts"));
 
 const App: React.FC = () => {
+  const [count, setCount] = useState(0)
+  const { t, i18n } = useTranslation();
+  const handleChangeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng); // Change language dynamically
+  };
+
   return (
-    <BrowserRouter>
+     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" Component={ListOfCourses}></Route>
         <Route path="/newcourse" Component={NewCourse}></Route>
         
-{/*         <Route path="/formUnstyled" Component={FormUnstyled}></Route>
-        <Route path="/signupantd" Component={SignUpAntd}></Route>
-        <Route path="/signupbootstrap4" Component={SignUpBootstrap4}></Route>
-        <Route path="/signupbootstrap5" Component={SignUpBootstrap5}></Route> */}
         <Route path="/signupmui" Component={SignUpMui}></Route>
-{/*         <Route path="/signupsemantic" Component={SignUpSemantic}></Route>
-        <Route path="/signupunstyled" Component={SignUpUnstyled}></Route> */}
-
         <Route path="/formjsonform" Component={FormJsonform}></Route>
         <Route path="/tableaggrid" Component={TableAgGrid}></Route>
-        
         <Route path="/coursedetails/:cid" Component={CourseDetails}></Route>
         <Route path="/contextapi" Component={GrandParent}></Route>
         <Route
@@ -49,6 +49,7 @@ const App: React.FC = () => {
           }
         ></Route>
         <Route path="/getpostbyid" Component={GetPostById}></Route>
+        <Route path="/translation" Component={Translation}></Route>
 
         <Route
           path="*"

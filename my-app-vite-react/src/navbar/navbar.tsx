@@ -101,6 +101,11 @@ const Navbar: React.FC = () => {
                 Context API
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/translation">
+                Translation
+              </Link>
+            </li>            
           </ul>
         </div>
       </div>

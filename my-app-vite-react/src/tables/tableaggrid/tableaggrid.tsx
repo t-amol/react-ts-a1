@@ -31,7 +31,7 @@ export  const TableAgGrid = () => {
               rowData={rows}
               pagination={true} // Enable pagination
               domLayout="autoHeight" // Automatically adjust grid height
-              paginationPageSize={5} // Pagination page size
+              paginationPageSize={10} // Pagination page size
               paginationPageSizeOptions={[5, 10, 20, 50]} // Options for page sizes
               paginationPageSizeSelector={false}
               //modules={[ClientSideRowModelModule]} // Import the necessary module here
