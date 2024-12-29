@@ -26,54 +26,11 @@ const Navbar: React.FC = () => {
                 Courses
               </Link>
             </li>
-{/*             <li className="nav-item">
+             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/newcourse">
                 New Course
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/formUnstyled">
-              FormUnstyled
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupantd">
-              SignupAntd
-              </Link>
-            </li>
-            
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupantd">
-              SignupAntd
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupbootstrap4">
-              SignupBootstrap4
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupbootstrap5">
-              SignupBootstrap5
-              </Link>
-            </li> */}
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupmui">
-              SignupMui
-              </Link>
-            </li>
-{/*             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupsemantic">
-              SignupSemantic
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signupunstyled">
-              SignupUnstyled
-              </Link>
-            </li> */}
-
           <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/formjsonform">
               FormJsonform

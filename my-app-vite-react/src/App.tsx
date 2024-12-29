@@ -8,12 +8,6 @@ import Navbar from "./navbar/navbar";
 import CourseDetails from "./coursedetails/coursedetails";
 import NewCourse from "./newcourse/newcourse";
 import GrandParent from "./contextapi/contextapi";
-import { SignUpBootstrap4 } from "./forms/uniforms/signupbootstrap4";
-import { SignUpAntd } from "./forms/uniforms/signupantd";
-import { SignUpBootstrap5 } from "./forms/uniforms/signupbootstrap5";
-import { SignUpMui } from "./forms/uniforms/signupmui";
-import { SignUpSemantic } from "./forms/uniforms/signupsemantic";
-import { SignUpUnstyled } from "./forms/uniforms/signupunstyled";
 import { FormJsonform } from "./forms/jsonforms/formjsonform";
 import { TableAgGrid } from "./tables/tableaggrid/tableaggrid";
 import { useTranslation } from 'react-i18next';
@@ -35,7 +29,6 @@ const App: React.FC = () => {
         <Route path="/" Component={ListOfCourses}></Route>
         <Route path="/newcourse" Component={NewCourse}></Route>
         
-        <Route path="/signupmui" Component={SignUpMui}></Route>
         <Route path="/formjsonform" Component={FormJsonform}></Route>
         <Route path="/tableaggrid" Component={TableAgGrid}></Route>
         <Route path="/coursedetails/:cid" Component={CourseDetails}></Route>
